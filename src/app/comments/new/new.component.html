@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Angular app </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Home</a>
+        <a class="nav-item nav-link" href="#">Books</a>
+        <a class="nav-item nav-link" href="#">Characters</a>
+        <a class="nav-item nav-link " href="#">Api Docs</a>
+        <a class="nav-item nav-link" href="#">Github (backend)</a>
+        <a class="nav-item nav-link" href="#">Github (frontend)</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">{{edit?'Edit comment':'New comment'}}</h1>
+         <p class="lead">
+    </p>
+</div> <hr class="my-2">
+    </div>
+
+    <div class="container">
+    <form #cf="ngForm"(submit)="addComment($event)">
+      <div class="form-group">
+        <label for="commenterName">Commenter name</label>
+        <input name="commenterName" required [(ngModel)]="comment.commenterName" #commentterName="ngModel"  type="text" class="form-control" id="commenterName" aria-describedby="emailHelp" placeholder="Your name">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="commentBody">Comment</label>
+        <textarea  name="commenterBody" required [(ngModel)]="comment.comment" #commentBody="ngModel"  class="form-control" id="commentBody" placeholder="Comment body max[500]"></textarea>
+      </div>
+      <br>
+      <button  type="submit" class="btn btn-primary btn-lg">Save Comment</button>
+    </form>
+  </div>
