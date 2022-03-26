@@ -7,8 +7,8 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiRequestService {
-  // server='https://booksfs.herokuapp.com/api/v1/'
-  server = 'http://127.0.0.1:8000/api/v1/'
+  server='https://booksfs.herokuapp.com/api/v1/'
+  // server = 'http://127.0.0.1:8000/api/v1/'
 
 
   constructor(private http: HttpClient) { }
